@@ -4,24 +4,22 @@
 #
 Name     : R-fAsianOptions
 Version  : 3042.82
-Release  : 9
+Release  : 10
 URL      : https://cran.r-project.org/src/contrib/fAsianOptions_3042.82.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/fAsianOptions_3042.82.tar.gz
 Summary  : Rmetrics - EBM and Asian Option Valuation
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-fAsianOptions-lib
-Requires: R-fBasics
-Requires: R-fOptions
-Requires: R-timeDate
+Requires: R-fAsianOptions-lib = %{version}-%{release}
+Requires: R-timeSeries
 BuildRequires : R-fBasics
 BuildRequires : R-fOptions
 BuildRequires : R-timeDate
+BuildRequires : R-timeSeries
 BuildRequires : buildreq-R
 
 %description
-and valuating Asian Options together with tools for analyzing
-    and modeling Exponential Brownian Motion (EBM).
+No detailed description available
 
 %package lib
 Summary: lib components for the R-fAsianOptions package.
@@ -39,11 +37,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1537797103
+export SOURCE_DATE_EPOCH=1552901959
 
 %install
+export SOURCE_DATE_EPOCH=1552901959
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1537797103
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -78,8 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library fAsianOptions|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  fAsianOptions || :
 
 
 %files
@@ -103,7 +100,7 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/fAsianOptions/help/paths.rds
 /usr/lib64/R/library/fAsianOptions/html/00Index.html
 /usr/lib64/R/library/fAsianOptions/html/R.css
-/usr/lib64/R/library/fAsianOptions/libs/symbols.rds
+/usr/lib64/R/library/fAsianOptions/tests/doRUnit.R
 /usr/lib64/R/library/fAsianOptions/unitTests/Makefile
 /usr/lib64/R/library/fAsianOptions/unitTests/runTests.R
 /usr/lib64/R/library/fAsianOptions/unitTests/runit.BesselFunctions.R
