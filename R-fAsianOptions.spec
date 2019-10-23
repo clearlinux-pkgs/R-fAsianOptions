@@ -4,7 +4,7 @@
 #
 Name     : R-fAsianOptions
 Version  : 3042.82
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/fAsianOptions_3042.82.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/fAsianOptions_3042.82.tar.gz
 Summary  : Rmetrics - EBM and Asian Option Valuation
@@ -20,10 +20,10 @@ BuildRequires : R-fOptions
 BuildRequires : R-timeDate
 BuildRequires : R-timeSeries
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
-and valuating Asian Options together with tools for analyzing
-    and modeling Exponential Brownian Motion (EBM).
+No detailed description available
 
 %package lib
 Summary: lib components for the R-fAsianOptions package.
@@ -41,10 +41,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569390456
+export SOURCE_DATE_EPOCH=1571826646
 
 %install
-export SOURCE_DATE_EPOCH=1569390456
+export SOURCE_DATE_EPOCH=1571826646
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
