@@ -4,7 +4,7 @@
 #
 Name     : R-fAsianOptions
 Version  : 3042.82
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/fAsianOptions_3042.82.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/fAsianOptions_3042.82.tar.gz
 Summary  : Rmetrics - EBM and Asian Option Valuation
